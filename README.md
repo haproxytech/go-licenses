@@ -15,7 +15,7 @@ To use this tool, make sure:
 * Change directory to your go project, **for example**:
 
   ```shell
-  git clone git@github.com:google/go-licenses.git
+  git clone https://github.com/haproxytech/go-licenses.git
   cd go-licenses
   ```
 

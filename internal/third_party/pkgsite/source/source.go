@@ -27,6 +27,7 @@ import (
 	"net/http"
 	"path"
 	"regexp"
+	"slices"
 	"strconv"
 	"strings"
 	"time"
@@ -619,13 +620,7 @@ func init() {
 	for i := range patterns {
 		re := regexp.MustCompile(patterns[i].pattern)
 		// The pattern regexp must contain a group named "repo".
-		found := false
-		for _, n := range re.SubexpNames() {
-			if n == "repo" {
-				found = true
-				break
-			}
-		}
+		found := slices.Contains(re.SubexpNames(), "repo")
 		if !found {
 			panic(fmt.Sprintf("pattern %s missing <repo> group", patterns[i].pattern))
 		}

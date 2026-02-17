@@ -19,6 +19,7 @@ import (
 	"errors"
 	"fmt"
 	"os"
+	"slices"
 	"strings"
 
 	"github.com/google/go-licenses/v2/licenses"
@@ -146,13 +147,7 @@ func getDisallowedLicenseTypes() []licenses.Type {
 }
 
 func isDisallowedLicenseType(licenseType licenses.Type, excludedLicenseTypes []licenses.Type) bool {
-	for _, excluded := range excludedLicenseTypes {
-		if excluded == licenseType {
-			return true
-		}
-	}
-
-	return false
+	return slices.Contains(excludedLicenseTypes, licenseType)
 }
 
 func getAllowedLicenseNames() []string {
@@ -170,11 +165,5 @@ func getAllowedLicenseNames() []string {
 }
 
 func isAllowedLicenseName(licenseName string, allowedLicenseNames []string) bool {
-	for _, allowed := range allowedLicenseNames {
-		if allowed == licenseName {
-			return true
-		}
-	}
-
-	return false
+	return slices.Contains(allowedLicenseNames, licenseName)
 }

@@ -96,8 +96,6 @@ func reportMain(_ *cobra.Command, args []string) error {
 	client := source.NewClient(time.Second * 20)
 	group, gctx := errgroup.WithContext(context.Background())
 	for idx, lib := range libs {
-		idx := idx
-		lib := lib
 
 		reportData[idx] = libraryData{
 			Name:         lib.Name(),

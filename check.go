@@ -22,7 +22,7 @@ import (
 	"slices"
 	"strings"
 
-	"github.com/google/go-licenses/v2/licenses"
+	"github.com/haproxytech/go-licenses/v2/licenses"
 	"github.com/spf13/cobra"
 	"golang.org/x/text/cases"
 	"golang.org/x/text/language"

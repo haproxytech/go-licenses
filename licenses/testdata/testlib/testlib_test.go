@@ -16,5 +16,5 @@ package testlib
 
 import (
 	// This import should be detected if includeTests set true
-	_ "github.com/google/go-licenses/v2/licenses/testdata/indirect"
+	_ "github.com/haproxytech/go-licenses/v2/licenses/testdata/indirect"
 )

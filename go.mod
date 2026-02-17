@@ -1,4 +1,4 @@
-module github.com/google/go-licenses/v2
+module github.com/haproxytech/go-licenses/v2
 
 go 1.25
 

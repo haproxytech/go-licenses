@@ -145,7 +145,7 @@ func TestLibraries(t *testing.T) {
 				os.Setenv("GOFLAGS", test.goflags)
 				defer os.Unsetenv("GOFLAGS")
 			}
-			gotLibs, err := Libraries(context.Background(), classifier, test.includeTests, test.ignore, test.importPath)
+			gotLibs, err := Libraries(context.Background(), classifier, test.includeTests, false, test.ignore, test.importPath)
 			if err != nil {
 				t.Fatalf("Libraries(_, %q) = (_, %q), want (_, nil)", test.importPath, err)
 			}

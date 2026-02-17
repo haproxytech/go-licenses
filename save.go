@@ -74,7 +74,7 @@ func saveMain(_ *cobra.Command, args []string) error {
 		return err
 	}
 
-	libs, err := licenses.Libraries(context.Background(), classifier, includeTests, ignore, args...)
+	libs, err := licenses.Libraries(context.Background(), classifier, includeTests, ignoreNongo, ignore, args...)
 	if err != nil {
 		return err
 	}

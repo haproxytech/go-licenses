@@ -36,9 +36,9 @@ Prerequisites:
 	}
 
 	// Flags shared between subcommands
-	includeTests bool
-	ignore       []string
-	packageHelp  = `
+	includeTests, ignoreNongo bool
+	ignore                    []string
+	packageHelp               = `
 
 Typically, specify the Go package that builds your Go binary.
 go-licenses expects the same package argument format as "go build".
@@ -63,6 +63,7 @@ func init() {
 	}
 	rootCmd.PersistentFlags().BoolVar(&includeTests, "include_tests", false, "Include packages only imported by testing code.")
 	rootCmd.PersistentFlags().StringSliceVar(&ignore, "ignore", nil, "Package path prefixes to be ignored. Dependencies from the ignored packages are still checked. Can be specified multiple times.")
+	rootCmd.PersistentFlags().BoolVar(&ignoreNongo, "ignore_nongo", false, "Ignore non-Go code.")
 }
 
 func main() {

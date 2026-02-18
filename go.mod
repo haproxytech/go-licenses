@@ -1,9 +1,9 @@
 module github.com/haproxytech/go-licenses/v2
 
-go 1.25
+go 1.26
 
 require (
-	github.com/google/go-cmp v0.6.0
+	github.com/google/go-cmp v0.7.0
 	github.com/google/go-replayers/httpreplay v1.2.0
 	github.com/google/licenseclassifier/v2 v2.0.0
 	github.com/otiai10/copy v1.14.1
